@@ -1,0 +1,907 @@
+/* ══════════════════════════════════════════
+   Akmal Zaidan — Portfolio
+   style.css
+   ══════════════════════════════════════════ */
+
+/* ── Variables ── */
+:root {
+  --white:   #fafaf8;
+  --paper:   #f4f2ee;
+  --ink:     #1a1814;
+  --muted:   #8a8580;
+  --border:  #dedad4;
+  --accent:  #1a1814;
+  --red:     #8b1a1a;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--white);
+  color: var(--ink);
+  font-family: 'Instrument Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── Subtle paper grain overlay ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ══════════════════════════════════════════
+   NAV
+   ══════════════════════════════════════════ */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5vw;
+  border-bottom: 1px solid var(--border);
+  background: rgba(250, 250, 248, 0.92);
+  backdrop-filter: blur(12px);
+}
+
+.nav-name {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.25s;
+}
+
+.nav-links a:hover {
+  color: var(--ink);
+}
+
+/* ══════════════════════════════════════════
+   HERO
+   ══════════════════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 5vw 5rem;
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid var(--border);
+  /* Background image - ganti 'bg-hero.jpg' dengan nama file gambar kamu */
+  background-image: url('bg-hero.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  isolation: isolate;
+}
+
+/* Overlay gradient agar teks terbaca di atas gambar */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(250,250,248,0.05) 0%,
+    rgba(250,250,248,0.0)  35%,
+    rgba(250,250,248,0.6)  70%,
+    rgba(250,250,248,0.97) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Semua konten langsung dalam .hero tampil di depan overlay */
+.hero-eyebrow,
+.hero-name,
+.hero-meta {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.hero-name {
+  font-family: 'IM Fell English', serif;
+  font-size: clamp(4.5rem, 11vw, 10rem);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 2rem;
+}
+
+.hero-name em {
+  font-style: italic;
+  color: var(--red);
+}
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-role {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-left: 2px solid var(--red);
+  padding-left: 0.8rem;
+}
+
+.hero-location {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.hero-scroll {
+  margin-left: auto;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(5px); }
+}
+
+/* ══════════════════════════════════════════
+   GOTHIC ORNAMENT
+   ══════════════════════════════════════════ */
+.ornament {
+  text-align: center;
+  font-family: 'IM Fell English', serif;
+  font-size: 1.4rem;
+  color: var(--border);
+  letter-spacing: 0.3em;
+  padding: 2rem 0;
+  user-select: none;
+}
+
+/* ══════════════════════════════════════════
+   SECTION (shared)
+   ══════════════════════════════════════════ */
+.section {
+  padding: 6rem 5vw;
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Batasi lebar konten agar tidak terlalu melebar di layar besar */
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.section-title {
+  font-family: 'IM Fell English', serif;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  margin-bottom: 3rem;
+  letter-spacing: -0.01em;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--red);
+}
+
+/* ══════════════════════════════════════════
+   ABOUT
+   ══════════════════════════════════════════ */
+.about-layout {
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-photo-wrap {
+  position: relative;
+}
+
+.about-photo {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'IM Fell English', serif;
+  font-size: 5rem;
+  color: var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-photo::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid var(--border);
+  pointer-events: none;
+}
+
+.about-photo::after {
+  content: '✦';
+  position: absolute;
+  bottom: 16px; right: 16px;
+  font-size: 1rem;
+  color: var(--red);
+  opacity: 0.5;
+}
+
+.photo-caption {
+  margin-top: 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.about-bio {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  line-height: 1.75;
+  color: var(--ink);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.about-bio strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.about-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.fact-item {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.fact-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.fact-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+/* ══════════════════════════════════════════
+   MUSIC SECTION
+   ══════════════════════════════════════════ */
+.music-section {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.music-section .section-label        { color: #c8a882; }
+.music-section .section-label::after { background: #333; }
+.music-section .section-title        { color: var(--white); }
+.music-section .section-title em     { color: #c8a882; }
+
+.music-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Artist list */
+.artists-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.artist-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: padding-left 0.3s;
+}
+
+.artist-row:hover {
+  padding-left: 0.5rem;
+}
+
+.artist-row.active {
+  padding-left: 0.5rem;
+}
+
+.artist-row.active .artist-name {
+  color: #c8a882;
+}
+
+.artist-row.active .artist-num {
+  color: #c8a882;
+}
+
+.artist-num {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.3);
+  min-width: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.artist-name {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.3rem;
+  flex: 1;
+  color: var(--white);
+}
+
+.artist-genre {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* Player */
+.player-wrap {
+  position: sticky;
+  top: 8rem;
+}
+
+.player {
+  background: #232018;
+  border: 1px solid #333;
+  border-radius: 2px;
+  padding: 2rem;
+}
+
+.player-art {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #1a1714;
+  border: 1px solid #2a2520;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+  display: block;
+}
+
+/* Poster gambar memenuhi seluruh kotak — pas sama dengan kolom player */
+.player-art img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: opacity 0.4s ease;
+}
+
+/* Placeholder saat belum ada gambar */
+.player-art-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  color: rgba(255,255,255,0.15);
+  font-size: 3rem;
+}
+
+.player-art-placeholder span {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.2);
+}
+
+/* Label "NOW PLAYING" di bagian bawah poster */
+.player-art-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  padding: 1.5rem 1rem 0.7rem;
+  text-align: center;
+}
+
+/* Info track tepat di bawah poster, tanpa gap */
+.player-info {
+  background: #1e1b17;
+  border: 1px solid #2a2520;
+  border-top: none;
+  padding: 1rem 1.2rem 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.player-track {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.15rem;
+  color: var(--white);
+  margin-bottom: 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-artist {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.08em;
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-bar-wrap {
+  margin-bottom: 1.5rem;
+}
+
+.player-bar {
+  width: 100%;
+  height: 2px;
+  background: #333;
+  border-radius: 99px;
+  cursor: pointer;
+  position: relative;
+}
+
+.player-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: #c8a882;
+  border-radius: 99px;
+  transition: width 0.1s linear;
+}
+
+.player-time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 0.5rem;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+}
+
+.ctrl-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.ctrl-btn:hover {
+  color: var(--white);
+}
+
+.ctrl-play {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--ink) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem !important;
+  transition: transform 0.2s, background 0.2s !important;
+}
+
+.ctrl-play:hover {
+  transform: scale(1.08);
+  background: #c8a882 !important;
+}
+
+/* Genre tags */
+.genre-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.genre-tag {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.4);
+  padding: 0.3rem 0.8rem;
+  border-radius: 1px;
+}
+
+/* ══════════════════════════════════════════
+   HOBBIES
+   ══════════════════════════════════════════ */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.hobby-card {
+  background: var(--white);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+
+.hobby-card:hover {
+  background: var(--paper);
+}
+
+.hobby-card::before {
+  content: attr(data-num);
+  position: absolute;
+  top: 1.5rem; right: 1.5rem;
+  font-family: 'IM Fell English', serif;
+  font-size: 4rem;
+  color: var(--border);
+  line-height: 1;
+}
+
+.hobby-icon {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.hobby-name {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.hobby-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.hobby-items {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.hobby-item {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.7rem;
+  color: var(--muted);
+  background: var(--white);
+}
+
+/* ══════════════════════════════════════════
+   TRAVEL
+   ══════════════════════════════════════════ */
+.travel-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.travel-card {
+  border: 1px solid var(--border);
+  padding: 2rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+  cursor: default;
+}
+
+.travel-card:hover {
+  border-color: var(--ink);
+  transform: translateY(-4px);
+}
+
+.travel-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s;
+}
+
+.travel-card:hover::after {
+  transform: scaleX(1);
+}
+
+.travel-flag {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.travel-city {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.travel-country {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.travel-note {
+  margin-top: 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ══════════════════════════════════════════
+   CONTACT
+   ══════════════════════════════════════════ */
+.contact-section {
+  background: var(--paper);
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.contact-intro {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  line-height: 1.75;
+  color: var(--ink);
+  font-weight: 300;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--ink);
+  transition: padding-left 0.3s;
+}
+
+.contact-row:hover {
+  padding-left: 0.5rem;
+}
+
+.contact-icon-wrap {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.contact-row:hover .contact-icon-wrap {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.contact-platform {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.contact-handle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.contact-arrow {
+  margin-left: auto;
+  font-size: 0.9rem;
+  color: var(--muted);
+  transition: transform 0.3s;
+}
+
+.contact-row:hover .contact-arrow {
+  transform: translateX(4px);
+}
+
+/* ══════════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════════ */
+footer {
+  padding: 2rem 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-left {
+  font-family: 'IM Fell English', serif;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.footer-right {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ══════════════════════════════════════════
+   ANIMATIONS
+   ══════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════ */
+
+/* ── Large desktop (>1400px) ── */
+@media (min-width: 1400px) {
+  .section         { padding: 7rem 8vw; }
+  nav              { padding: 1.2rem 8vw; }
+  .hero            { padding: 0 8vw 6rem; }
+}
+
+/* ── Medium desktop / laptop (901px – 1200px) ── */
+@media (max-width: 1200px) {
+  .about-layout    { grid-template-columns: 42% 1fr; gap: 3rem; }
+  .travel-layout   { grid-template-columns: repeat(2, 1fr); }
+  .music-layout    { gap: 3rem; }
+}
+
+/* ── Tablet / small laptop (max 900px) ── */
+@media (max-width: 900px) {
+  nav              { padding: 1rem 1.5rem; }
+  .hero            { padding: 0 1.5rem 4rem; }
+  .hero-name       { font-size: clamp(3.5rem, 16vw, 5rem); }
+  .section         { padding: 4rem 1.5rem; }
+  .about-layout    { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-photo     { aspect-ratio: 4/3; max-height: 420px; }
+  .music-layout    { grid-template-columns: 1fr; }
+  .hobbies-grid    { grid-template-columns: 1fr; }
+  .travel-layout   { grid-template-columns: repeat(2, 1fr); }
+  .contact-layout  { grid-template-columns: 1fr; gap: 2.5rem; }
+  footer           { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+}
+
+/* ── Mobile (max 480px) ── */
+@media (max-width: 480px) {
+  .hero-name       { font-size: clamp(3rem, 18vw, 4rem); }
+  .travel-layout   { grid-template-columns: 1fr; }
+  .about-facts     { grid-template-columns: 1fr; }
+  .hero-meta       { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .hero-scroll     { margin-left: 0; }
+}

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akmal Zaidan</title>
+
+  <link rel="icon" type="image/svg+xml" href="spider-man-4-logo-svgrepo-com (1).svg">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ════ NAV ════ -->
+  <nav>
+    <div class="nav-name">Akmal Zaidan</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#travel">Travel</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ════ HERO ════ -->
+  <section class="hero">
+    
+    <p class="hero-eyebrow reveal">— A page about someone</p>
+    <h1 class="hero-name reveal">Akmal<br><em>Zaidan.</em></h1>
+    <div class="hero-meta reveal">
+      <div class="hero-role">Mahasiswa D4 Sistem Informasi Kota Cerdas<br>Telkom University</div>
+      <div class="hero-location">Bandung, Jawa Barat — Indonesia</div>
+      <div class="hero-scroll">Scroll ↓</div>
+    </div>
+  </section>
+
+  <div class="ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+  <!-- ════ ABOUT ════ -->
+  <section class="section" id="about">
+    <p class="section-label">01 — About</p>
+    <div class="about-layout">
+
+      <div class="about-photo-wrap reveal">
+        <div class="about-photo">
+          <img src="WhatsApp Image 2026-03-23 at 07.38.45.jpeg" alt="Akmal Zaidan"style="width:100%;height:100%;object-fit:cover;"/>
+</div>
+        </div>
+        <p class="photo-caption">Akmal Zaidan, 2025</p>
+      </div>
+
+      <div class="about-text reveal">
+        <h2 class="section-title">Seorang<br><em>penjelajah</em><br>digital.</h2>
+        <p class="about-bio">
+          Halo — saya <strong>Akmal Zaidan</strong>, mahasiswa D4 Sistem Informasi Kota Cerdas di <strong>Telkom University</strong>. Saya percaya teknologi bukan sekadar alat, melainkan sebuah bahasa untuk menceritakan dunia yang lebih baik.
+        </p>
+        <p class="about-bio" style="margin-top: -1.5rem;">
+          Di luar dunia akademik, saya adalah seseorang yang hidupnya selalu ditemani oleh musik, diwarnai dengan berbagai petualangan, dan sesekali ditenangkan lewat layar game. Bagi saya, hal-hal sederhana seperti lagu yang pas di waktu yang tepat, perjalanan kecil yang penuh cerita, atau momen santai bermain game bisa jadi cara terbaik untuk menikmati hidup.
+
+Saya juga termasuk orang yang senang berkenalan dengan orang baru. Setiap orang punya cerita, sudut pandang, dan pengalaman yang berbeda—dan di situlah saya merasa selalu bisa belajar sesuatu yang baru. Berbagi cerita, tertawa bersama, atau bahkan sekadar ngobrol santai adalah hal-hal yang saya nikmati.
+
+Secara pribadi, saya adalah orang yang santai, easy going, dan berusaha membawa energi positif ke lingkungan sekitar. Saya percaya bahwa sikap sederhana seperti menghargai proses, menikmati momen, dan tetap bersyukur bisa membuat perjalanan hidup terasa lebih berarti.
+
+Banyak hal yang sudah saya lalui hingga hari ini, dan semua pengalaman itu—baik yang menyenangkan maupun yang menantang—telah membentuk saya menjadi diri saya yang sekarang. Dan perjalanan ini tentu belum selesai. Saya masih terus melangkah, belajar, dan menikmati setiap proses yang ada di depan.
+        </p>
+        <div class="about-facts">
+          <div class="fact-item">
+            <p class="fact-label">Asal</p>
+            <p class="fact-value">Indonesia</p>
+          </div>
+          <div class="fact-item">
+            <p class="fact-label">Kampus</p>
+            <p class="fact-value">Telkom University</p>
+          </div>
+          <div class="fact-item">
+            <p class="fact-label">Program Studi</p>
+            <p class="fact-value">D4 Sistem Informasi Kota Cerdas</p>
+          </div>
+          <div class="fact-item">
+            <p class="fact-label">Status</p>
+            <p class="fact-value" style="font-style:italic">Active student</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+  <!-- ════ MUSIC ════ -->
+  <section class="section music-section" id="music">
+    <p class="section-label">02 — Music</p>
+    <div class="music-layout">
+
+      <!-- ── Daftar Artis ── -->
+      <div>
+        <h2 class="section-title">Musik yang<br>mengisi <em>hari-hari.</em></h2>
+        <div class="artists-list" id="artistList">
+
+          <!--
+            ════════════════════════════════════
+            CARA ISI DATA LAGU:
+              data-poster  = nama file poster    (contoh: poster-noah.jpg)
+              data-audio   = nama file musik     (contoh: audio-noah.mp3)
+              data-track   = judul lagu
+              data-artist  = nama artis
+              data-duration= durasi dalam detik  (contoh: 210 = 3:30)
+            Semua file taruh satu folder dengan index.html
+            ════════════════════════════════════
+          -->
+
+          <!-- 01 — NOAH -->
+          <div class="artist-row"
+               data-index="0"
+               data-poster="separuhaku.jpg"
+               data-audio="NOAH - Separuh Aku (Official Music Video).mp3"
+               data-track="Separuh Aku"
+               data-artist="Noah"
+               data-duration="210"
+               onclick="selectArtist(this)">
+            <span class="artist-num">01</span>
+            <span class="artist-name">Noah</span>
+            <span class="artist-genre">Indie Pop / Rock</span>
+          </div>
+
+          <!-- 02 — KENDRICK LAMAR -->
+          <div class="artist-row"
+               data-index="1"
+               data-poster="humble.jpg"
+               data-audio="Kendrick Lamar - HUMBLE. (Lyrics).mp3"
+               data-track="Humble"
+               data-artist="Kendrick Lamar"
+               data-duration="274"
+               onclick="selectArtist(this)">
+            <span class="artist-num">02</span>
+            <span class="artist-name">Kendrick Lamar</span>
+            <span class="artist-genre">Hip-Hop / Rap</span>
+          </div>
+
+          <!-- 03 — RAVYN LANAE -->
+          <div class="artist-row"
+               data-index="2"
+               data-poster="love me not.jpg"
+               data-audio="Ravyn Lenae - Love Me Not (Lyrics).mp3"
+               data-track="Love Me Not"
+               data-artist="Ravyn Lanae"
+               data-duration="195"
+               onclick="selectArtist(this)">
+            <span class="artist-num">03</span>
+            <span class="artist-name">Ravyn Lanae</span>
+            <span class="artist-genre">R&amp;B Alternatif</span>
+          </div>
+
+          <!-- 04 — PERUNGGU -->
+          <div class="artist-row"
+               data-index="3"
+               data-poster="gemilang.png"
+               data-audio="Perunggu - Gemilang (Official Lyric Video).mp3"
+               data-track="Gemilang"
+               data-artist="Perunggu"
+               data-duration="230"
+               onclick="selectArtist(this)">
+            <span class="artist-num">04</span>
+            <span class="artist-name">Perunggu</span>
+            <span class="artist-genre">Alternative Rock / Indie Rock</span>
+          </div>
+
+          <!-- 05 — NUCA -->
+          <div class="artist-row"
+               data-index="4"
+               data-poster="masaini.jpg"
+               data-audio="Nuca - Masa ini, Nanti, dan Masa Indah Lainnya (Lirik Video) - Lirik Sorai (youtube).mp3"
+               data-track="Masa Ini, Nanti, dan Masa Indah Lainnya"
+               data-artist="Nuca"
+               data-duration="220"
+               onclick="selectArtist(this)">
+            <span class="artist-num">05</span>
+            <span class="artist-name">Nuca</span>
+            <span class="artist-genre">Pop Indonesia</span>
+          </div>
+
+        </div>
+
+        <div class="genre-tags" style="margin-top:2rem">
+          <span class="genre-tag">Indie</span>
+          <span class="genre-tag">Alternative</span>
+          <span class="genre-tag">Pop</span>
+          <span class="genre-tag">R&amp;B</span>
+          <span class="genre-tag">Metal</span>
+          <span class="genre-tag">Rock</span>
+          <span class="genre-tag">Lo-fi</span>
+          <span class="genre-tag">Jazz</span>
+        </div>
+      </div>
+
+      <!-- ── Music Player ── -->
+      <div class="player-wrap reveal">
+        <div class="player">
+
+          <!-- Poster — otomatis muncul saat lagu dipilih (500x500px ideal) -->
+          <div class="player-art" id="playerArt">
+            <img id="playerPoster" src="" alt="Album Art" style="display:none;"/>
+            <div class="player-art-placeholder" id="playerPlaceholder">
+              <span>♪</span>
+              <span>Pilih lagu</span>
+            </div>
+            <div class="player-art-label" id="playerArtLabel">Pilih lagu untuk mulai</div>
+          </div>
+
+          <!-- Info track -->
+          <div class="player-info">
+            <p class="player-track"  id="playerTrack">—</p>
+            <p class="player-artist" id="playerArtist">Klik nama artis di kiri</p>
+          </div>
+
+          <!-- Progress bar -->
+          <div class="player-bar-wrap">
+            <div class="player-bar" id="playerBar" onclick="seekPlayer(event)">
+              <div class="player-bar-fill" id="playerFill"></div>
+            </div>
+            <div class="player-time">
+              <span id="playerCurrent">0:00</span>
+              <span id="playerDuration">0:00</span>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="player-controls">
+            <button class="ctrl-btn" onclick="prevTrack()" title="Sebelumnya">⏮</button>
+            <button class="ctrl-btn ctrl-play" id="playBtn" onclick="togglePlay()">▶</button>
+            <button class="ctrl-btn" onclick="nextTrack()" title="Berikutnya">⏭</button>
+          </div>
+
+          <!-- Audio element tersembunyi — dikendalikan script.js -->
+          <audio id="audioPlayer" preload="none"></audio>
+
+        </div>
+        <p style="font-size:0.65rem;color:rgba(255,255,255,0.18);margin-top:0.8rem;text-align:center;letter-spacing:0.08em;line-height:1.6;">
+          Isi file poster &amp; audio sesuai komentar di HTML
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="ornament" style="background:var(--ink);color:#333;border-top:1px solid #333;border-bottom:1px solid #333;">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+  <!-- ════ HOBBIES ════ -->
+  <section class="section" id="hobbies">
+    <p class="section-label">03 — Hobbies</p>
+    <h2 class="section-title reveal">Hal-hal yang<br>saya <em>cintai.</em></h2>
+    <div class="hobbies-grid">
+
+      <div class="hobby-card reveal" data-num="I">
+        <span class="hobby-icon">🎮</span>
+        <h3 class="hobby-name">Gaming</h3>
+        <p class="hobby-desc">Bukan sekadar hiburan — gaming adalah dunia lain yang bisa dijelajahi, arena strategi, dan tempat saya bisa jadi siapa saja.</p>
+        <div class="hobby-items">
+          <span class="hobby-item">Mobile Legends</span>
+          <span class="hobby-item">EA Sports FC 25</span>
+          <span class="hobby-item">Strategy</span>
+          <span class="hobby-item">Competitive</span>
+        </div>
+      </div>
+
+      <div class="hobby-card reveal" data-num="II">
+        <span class="hobby-icon">✈️</span>
+        <h3 class="hobby-name">Traveling</h3>
+        <p class="hobby-desc">Setiap kota punya cerita. Saya percaya bahwa perjalanan adalah cara terbaik untuk memahami dunia dan diri sendiri.</p>
+        <div class="hobby-items">
+          <span class="hobby-item">City Explorer</span>
+          <span class="hobby-item">Culture</span>
+          <span class="hobby-item">Photography</span>
+          <span class="hobby-item">Street Food</span>
+        </div>
+      </div>
+
+      <div class="hobby-card reveal" data-num="III">
+        <span class="hobby-icon">🎵</span>
+        <h3 class="hobby-name">Mendengarkan Musik</h3>
+        <p class="hobby-desc">Dari lirik yang dalam hingga beat yang menggerakkan jiwa — musik adalah teman setia di setiap momen.</p>
+        <div class="hobby-items">
+          <span class="hobby-item">Noah</span>
+          <span class="hobby-item">Kendrick Lamar</span>
+          <span class="hobby-item">Playlist Curation</span>
+        </div>
+      </div>
+
+      <div class="hobby-card reveal" data-num="IV">
+        <span class="hobby-icon">💻</span>
+        <h3 class="hobby-name">Teknologi & SI</h3>
+        <p class="hobby-desc">Sebagai mahasiswa Sistem Informasi, saya juga menikmati eksplorasi teknologi kota cerdas dan bagaimana data membentuk dunia.</p>
+        <div class="hobby-items">
+          <span class="hobby-item">Smart City</span>
+          <span class="hobby-item">Data</span>
+          <span class="hobby-item">Web</span>
+          <span class="hobby-item">Innovation</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+  <!-- ════ TRAVEL ════ -->
+  <section class="section" id="travel">
+    <p class="section-label">04 — Dream Destinations</p>
+    <h2 class="section-title reveal">Destinasi yang<br>saya <em>impikan.</em></h2>
+    <div class="travel-layout">
+
+      <div class="travel-card reveal">
+        <span class="travel-flag">🇯🇵</span>
+        <h3 class="travel-city">Tokyo / Japan</h3>
+        <p class="travel-country">East Asia</p>
+        <p class="travel-note">Teknologi, budaya, sakura — dan anime yang hidup di jalanan nyata.</p>
+      </div>
+
+      <div class="travel-card reveal">
+        <span class="travel-flag">🇺🇸</span>
+        <h3 class="travel-city">Manhattan</h3>
+        <p class="travel-country">New York, USA</p>
+        <p class="travel-note">Kota yang tidak pernah tidur, skyline yang ikonik, dan energi yang tak tertandingi.</p>
+      </div>
+
+      <div class="travel-card reveal">
+        <span class="travel-flag">🇳🇱</span>
+        <h3 class="travel-city">Amsterdam</h3>
+        <p class="travel-country">Netherlands</p>
+        <p class="travel-note">Kanal yang tenang, sepeda di mana-mana, dan seni yang ada di setiap sudut kota.</p>
+      </div>
+
+      <div class="travel-card reveal">
+        <span class="travel-flag">🇬🇧</span>
+        <h3 class="travel-city">London</h3>
+        <p class="travel-country">United Kingdom</p>
+        <p class="travel-note">Sejarah yang megah berpadu dengan modernitas — kota yang selalu punya cerita baru.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+  <!-- ════ CONTACT ════ -->
+  <section class="section contact-section" id="contact">
+    <p class="section-label">05 — Contact</p>
+    <div class="contact-layout">
+
+      <div class="reveal">
+        <h2 class="section-title">Mari<br><em>terhubung.</em></h2>
+        <p class="contact-intro">
+          Apakah itu untuk kolaborasi, ngobrol soal teknologi, rekomendasi musik, atau sekadar menyapa — saya selalu senang mendengar dari orang baru.
+        </p>
+      </div>
+
+      <div class="contact-list reveal">
+        <a class="contact-row" href="/cdn-cgi/l/email-protection#zaidanakmal247@gmail.com">
+          <div class="contact-icon-wrap"><svg height="150px" width="150px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-93.03 -93.03 496.18 496.18" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="7.132645000000001"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#D07C40;" d="M309.691,116.824c-1.401-4.069-3.605-7.906-6.852-11.153L175.595,9.17 c-16.594-12.226-25.051-12.226-41.364,0L7.537,105.671c-3.247,3.247-5.46,7.084-6.862,11.153l154.237,135.304 C154.913,252.129,309.691,116.824,309.691,116.824z"></path> <path style="fill:#E4E7E7;" d="M39.082,29.852h231.95v193.282H39.082V29.852z"></path> <path style="fill:#E8AB54;" d="M16.351,297.203l138.523-107.905l138.88,107.915c5.132-2.619,9.346-6.678,12.158-11.704 L175.595,183.152c-16.449-12.139-25.099-12.332-41.364,0L4.116,285.345C6.919,290.428,11.152,294.555,16.351,297.203z"></path> <path style="fill:#C2C5C5;" d="M77.741,78.175v19.329h154.634V78.175H77.741z M77.741,136.152h154.634v-19.32H77.741V136.152z"></path> <path style="fill:#E8AB54;" d="M155.058,232.799l154.634-115.975v164.298c0,16.014-12.98,28.994-28.994,28.994H29.418 c-16.014,0-28.994-12.98-28.994-28.994V116.824C0.424,116.824,155.058,232.799,155.058,232.799z"></path> <path style="fill:#F4B459;" d="M283.79,309.796c6.263-0.667,11.926-3.286,16.343-7.306L154.874,189.288L9.953,302.49 c4.426,4.03,10.08,6.64,16.362,7.316L283.79,309.796z"></path> <path style="fill:#F9D7A7;" d="M4.116,295.009c2.803,5.084,7.045,9.21,12.235,11.868l138.523-107.896l138.88,107.905 c5.132-2.619,9.346-6.678,12.158-11.704L175.595,192.798c-18.256-13.521-22.683-14.139-41.364,0 C134.23,192.798,4.116,295.009,4.116,295.009z"></path> </g> </g></svg></div>
+          <div>
+            <p class="contact-platform">Email</p>
+            <p class="contact-handle"><span class="__cf_email__" data-cfemail="f293999f939eb2979f939b9edc919d9f">zaidanakmal247@gmail.com</span></p>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+        <a class="contact-row" href="https://www.linkedin.com/in/akmalzaidan247/" target="_blank">
+          <div class="contact-icon-wrap"><svg width="150px" height="150px" viewBox="-13.2 -13.2 70.40 70.40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>LinkedIn-color</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Color-" transform="translate(-702.000000, -265.000000)" fill="#007EBB"> <path d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z" id="LinkedIn"> </path> </g> </g> </g></svg></div>
+          <div>
+            <p class="contact-platform">LinkedIn</p>
+            <p class="contact-handle">Akmal Zaidan</p>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+        <a class="contact-row" href="https://www.instagram.com/akmzaidn/" target="_blank">
+          <div class="contact-icon-wrap"><svg width="150px" height="150px" viewBox="-9.6 -9.6 51.20 51.20" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint0_radial_87_7153)"></rect> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint1_radial_87_7153)"></rect> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint2_radial_87_7153)"></rect> <path d="M23 10.5C23 11.3284 22.3284 12 21.5 12C20.6716 12 20 11.3284 20 10.5C20 9.67157 20.6716 9 21.5 9C22.3284 9 23 9.67157 23 10.5Z" fill="white"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M16 21C18.7614 21 21 18.7614 21 16C21 13.2386 18.7614 11 16 11C13.2386 11 11 13.2386 11 16C11 18.7614 13.2386 21 16 21ZM16 19C17.6569 19 19 17.6569 19 16C19 14.3431 17.6569 13 16 13C14.3431 13 13 14.3431 13 16C13 17.6569 14.3431 19 16 19Z" fill="white"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M6 15.6C6 12.2397 6 10.5595 6.65396 9.27606C7.2292 8.14708 8.14708 7.2292 9.27606 6.65396C10.5595 6 12.2397 6 15.6 6H16.4C19.7603 6 21.4405 6 22.7239 6.65396C23.8529 7.2292 24.7708 8.14708 25.346 9.27606C26 10.5595 26 12.2397 26 15.6V16.4C26 19.7603 26 21.4405 25.346 22.7239C24.7708 23.8529 23.8529 24.7708 22.7239 25.346C21.4405 26 19.7603 26 16.4 26H15.6C12.2397 26 10.5595 26 9.27606 25.346C8.14708 24.7708 7.2292 23.8529 6.65396 22.7239C6 21.4405 6 19.7603 6 16.4V15.6ZM15.6 8H16.4C18.1132 8 19.2777 8.00156 20.1779 8.0751C21.0548 8.14674 21.5032 8.27659 21.816 8.43597C22.5686 8.81947 23.1805 9.43139 23.564 10.184C23.7234 10.4968 23.8533 10.9452 23.9249 11.8221C23.9984 12.7223 24 13.8868 24 15.6V16.4C24 18.1132 23.9984 19.2777 23.9249 20.1779C23.8533 21.0548 23.7234 21.5032 23.564 21.816C23.1805 22.5686 22.5686 23.1805 21.816 23.564C21.5032 23.7234 21.0548 23.8533 20.1779 23.9249C19.2777 23.9984 18.1132 24 16.4 24H15.6C13.8868 24 12.7223 23.9984 11.8221 23.9249C10.9452 23.8533 10.4968 23.7234 10.184 23.564C9.43139 23.1805 8.81947 22.5686 8.43597 21.816C8.27659 21.5032 8.14674 21.0548 8.0751 20.1779C8.00156 19.2777 8 18.1132 8 16.4V15.6C8 13.8868 8.00156 12.7223 8.0751 11.8221C8.14674 10.9452 8.27659 10.4968 8.43597 10.184C8.81947 9.43139 9.43139 8.81947 10.184 8.43597C10.4968 8.27659 10.9452 8.14674 11.8221 8.0751C12.7223 8.00156 13.8868 8 15.6 8Z" fill="white"></path> <defs> <radialGradient id="paint0_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 23) rotate(-55.3758) scale(25.5196)"> <stop stop-color="#B13589"></stop> <stop offset="0.79309" stop-color="#C62F94"></stop> <stop offset="1" stop-color="#8A3AC8"></stop> </radialGradient> <radialGradient id="paint1_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(11 31) rotate(-65.1363) scale(22.5942)"> <stop stop-color="#E0E8B7"></stop> <stop offset="0.444662" stop-color="#FB8A2E"></stop> <stop offset="0.71474" stop-color="#E2425C"></stop> <stop offset="1" stop-color="#E2425C" stop-opacity="0"></stop> </radialGradient> <radialGradient id="paint2_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.500002 3) rotate(-8.1301) scale(38.8909 8.31836)"> <stop offset="0.156701" stop-color="#406ADC"></stop> <stop offset="0.467799" stop-color="#6A45BE"></stop> <stop offset="1" stop-color="#6A45BE" stop-opacity="0"></stop> </radialGradient> </defs> </g></svg></div>
+          <div>
+            <p class="contact-platform">Instagram</p>
+            <p class="contact-handle">@akmalzaidan</p>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+        <a class="contact-row" href="https://github.com/zaidanakmal247-cell" target="_blank">
+          <div class="contact-icon-wrap"><svg width="150px" height="150px" viewBox="-14.4 -14.4 76.80 76.80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Github-color</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Color-" transform="translate(-700.000000, -560.000000)" fill="#3E75C3"> <path d="M723.9985,560 C710.746,560 700,570.787092 700,584.096644 C700,594.740671 706.876,603.77183 716.4145,606.958412 C717.6145,607.179786 718.0525,606.435849 718.0525,605.797328 C718.0525,605.225068 718.0315,603.710086 718.0195,601.699648 C711.343,603.155898 709.9345,598.469394 709.9345,598.469394 C708.844,595.686405 707.2705,594.94548 707.2705,594.94548 C705.091,593.450075 707.4355,593.480194 707.4355,593.480194 C709.843,593.650366 711.1105,595.963499 711.1105,595.963499 C713.2525,599.645538 716.728,598.58234 718.096,597.964902 C718.3135,596.407754 718.9345,595.346062 719.62,594.743683 C714.2905,594.135281 708.688,592.069123 708.688,582.836167 C708.688,580.205279 709.6225,578.054788 711.1585,576.369634 C710.911,575.759726 710.0875,573.311058 711.3925,569.993458 C711.3925,569.993458 713.4085,569.345902 717.9925,572.46321 C719.908,571.928599 721.96,571.662047 724.0015,571.651505 C726.04,571.662047 728.0935,571.928599 730.0105,572.46321 C734.5915,569.345902 736.603,569.993458 736.603,569.993458 C737.9125,573.311058 737.089,575.759726 736.8415,576.369634 C738.3805,578.054788 739.309,580.205279 739.309,582.836167 C739.309,592.091712 733.6975,594.129257 728.3515,594.725612 C729.2125,595.469549 729.9805,596.939353 729.9805,599.18773 C729.9805,602.408949 729.9505,605.006706 729.9505,605.797328 C729.9505,606.441873 730.3825,607.191834 731.6005,606.9554 C741.13,603.762794 748,594.737659 748,584.096644 C748,570.787092 737.254,560 723.9985,560" id="Github"> </path> </g> </g> </g></svg></div>
+          <div>
+            <p class="contact-platform">GitHub</p>
+            <p class="contact-handle">@akmalzaidan</p>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+       
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════ FOOTER ════ -->
+  <footer>
+    <div class="footer-left">Akmal Zaidan — 2025</div>
+    <div class="footer-right">Telkom University · Bandung, Indonesia</div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
